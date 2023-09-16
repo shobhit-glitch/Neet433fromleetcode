@@ -13,6 +13,7 @@ public:
         // }
         // return -1;
         //**************** [ SOLUTION BASED APPROACH ] ****************
+        //**************** [ CRWAZYYYYYYYYYYYYYYYYYY ] ****************
         sort(nums.begin(),nums.end());
         return nums[nums.size()/2];
 
