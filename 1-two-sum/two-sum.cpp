@@ -1,6 +1,7 @@
 class Solution {
 public:
     vector<int> twoSum(vector<int>& nums, int target) {
+        //************** [BRUTE FORCE APPROACH ] **************
         int n=nums.size();
         vector<int>v;
         int flag=0;
@@ -18,5 +19,6 @@ public:
             }
         }
         return v;
+        
     }
 };
