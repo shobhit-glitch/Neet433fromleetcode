@@ -21,8 +21,6 @@ public:
             curr=fwd;
         }
         return prev;
-        
-        
 
     }
 };
