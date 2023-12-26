@@ -11,17 +11,15 @@ public:
     bool hasCycle(ListNode *head) {
         ListNode *f=head;
         ListNode *s=head;
-        if(head==NULL || head->next==NULL ){
+        if(f==NULL || f->next==NULL){
             return false;
         }
         while(f && f->next!=NULL){
-            
             f=f->next->next;
             s=s->next;
             if(f==s){
                 return true;
             }
-
         }
         return false;
     }
