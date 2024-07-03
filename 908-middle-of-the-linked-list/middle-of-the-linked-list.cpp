@@ -11,29 +11,21 @@
 class Solution {
 public:
     ListNode* middleNode(ListNode* head) {
-        ListNode* temp=head;
-        int cnt=0;
-        while(temp!=NULL){
-            cnt+=1;
-            temp=temp->next;
-
-        }
-        cout<<cnt;
-        int start;
-        ListNode* temp1=head;
-        if(cnt%2==0){
-            start=(cnt/2)+1;
-        }
-        else{
-            start=(cnt+1)/2;
-        }
-        while(start!=1){
-            start-=1;
-            temp1=temp1->next;
-            
-        }
-        head=temp1;
-        return temp1;
+        ListNode* fast=head;
+        ListNode* slow=head;
+        int cnt=1;
         
+        while(fast!=NULL){
+            if(cnt%2==0){
+                slow=slow->next;
+            }
+            fast=fast->next;
+            cnt++;
+        }
+        if(cnt==1){
+            return slow;
+        }
+        
+        return slow;
     }
 };
